@@ -1,0 +1,142 @@
+.multi_gallery h3 {
+    background: #d0f2ff;
+    color: #1D4DA1;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 0.5px;
+}
+.multi_gallery .multi_gal_box {
+    border: 1px solid #ddd;
+    margin: 15px 0;
+    padding: 10px;
+}
+.multi_gallery .multi_gal_box .thumbnail_container {
+    padding-bottom: 66.6%;
+    border-radius: 0px;
+    position: relative;
+    overflow: hidden;
+}
+.multi_gallery .multi_gal_box .thumbnail {
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px 0px 0px 0px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: none;
+}
+.multi_gallery .multi_gal_box .thumbnail>img {
+    bottom: 0;
+    display: block;
+    height: auto;
+    left: 0;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    padding: 0px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.nqimg_mask {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9;    
+    background: rgba(0,0,0,0.6);
+    transition: all 0.5s ease;
+    -webkit-animation: all 0.5s ease;
+    opacity: 0;
+    transform: scale(1.25);
+}
+.multi_gal_box:hover .nqimg_mask {
+    opacity: 1;
+    transform: scale(1);
+}
+.nqimg_mask .nqimg_inner {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -khtml-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: relative;
+}
+.nqimg_mask .nqimg_inner .btn {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+.multi_gallery .multi_gal_box .nqsocia {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    font-size: 18px;
+}
+.multi_gallery .multi_gal_box .nqsocia li {
+    display: inline-block;
+    padding: 0 2px;
+}
+.multi_gallery .multi_gal_box .nqsocia li a {
+    background: #e5f4fb;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 14px;    
+    min-width: 35px;
+    display: inline-block;
+    transition: all 0.5s ease;
+    -webkit-animation: all 0.5s ease;
+}
+.multi_gallery .multi_gal_box .nqsocia li a:hover {
+    background-color: #60c7f2;    
+    color: #fff;
+}
+.multi_gallery .multi_gal_box .team_desc {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.multi_gallery .multi_gal_box .form_title {
+    text-transform: capitalize;
+    color: #1D4DA1 !important;
+}
+.multi_gallery .multi_gal_box .form-group.form-md-line-input {
+    position: relative;
+    margin: 0px 0 25px;
+    padding-top: 20px;
+}
+
+.multi_gallery .multi_gal_box .form-group.form-md-line-input .form-control~.form-control-focus:after, 
+.multi_gallery .multi_gal_box .form-group.form-md-line-input .form-control~label:after {
+    height: 1px;
+}
+.multi_gallery .multi_gal_box .form-group.form-md-line-input .form-control.edited:not([readonly])~.form-control-focus:after, 
+.multi_gallery .multi_gal_box .form-group.form-md-line-input .form-control.edited:not([readonly])~label:after, 
+.multi_gallery .multi_gal_box .form-group.form-md-line-input .form-control.focus:not([readonly])~.form-control-focus:after, 
+.multi_gallery .multi_gal_box .form-group.form-md-line-input .form-control.focus:not([readonly])~label:after, 
+.multi_gallery .multi_gal_box .form-group.form-md-line-input .form-control:focus:not([readonly])~.form-control-focus:after, 
+.multi_gallery .multi_gal_box .form-group.form-md-line-input .form-control:focus:not([readonly])~label:after {
+    background: #c2cad8;
+}
+.message_loader {    
+    background: rgba(0,0,0,.4) !important;
+}
+.message_loader .cell_conter img { 
+    border-radius: 50%;
+}
