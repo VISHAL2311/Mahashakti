@@ -1,0 +1,329 @@
+.boat_sec {
+    padding-left: 13.5%;
+    @media (max-width: 1600px) {
+        padding-left: 6.2%;
+    }
+    @media (max-width: 1366px) {
+        padding-left: 4.2%;
+    }
+    @media (max-width: 767px) {
+        padding-left: 0%;
+    }
+    .container-fluid {
+        padding: 0;
+        @media (max-width: 1024px) {
+            padding-right: 40px;
+        }
+        @media (max-width: 767px) {
+            padding: 0 15px;
+        }
+    }
+    .boat-card-slider {
+        .swiper-wrapper {
+            padding-bottom: 85px;
+            @media (max-width: 1024px) {
+                padding-bottom: 60px;
+            }
+            @media (max-width: 767px) {
+                padding-bottom: 30px;
+            }
+            .swiper-slide {
+                position: relative;
+                &:hover {
+                    .boat_img {
+                        .thumbnail-container {
+                            &::after {
+                                opacity: 1;
+                            }
+                        }
+                        .line {
+                            &::after {
+                                height: 100%;
+                            }
+                        }
+                    }
+                    .boat-desc-wrap {
+                        .boat_title {
+                            bottom: 120px;
+                            @media (max-width: 767px) {
+                                bottom: 80px;
+                            }
+                            @media (max-width: 475px) {
+                                bottom: 100px;
+                            }
+                        }
+                        .boat_desc {
+                            opacity: 1;
+                            bottom: 70px;
+                            @media (max-width: 1197px) {
+                                bottom: 45px;
+                            }
+                            @media (max-width: 1024px) {
+                                bottom: 70px;
+                            }
+                            @media (max-width: 991px) {
+                                bottom: 50px;
+                            }
+                            @media (max-width: 767px) {
+                                bottom: 45px;
+                            }
+                        }
+                        .boat-btn {
+                            bottom: 0;
+                            opacity: 1;
+                            @media (max-width: 767px) {
+                                bottom: 15px;
+                            }
+                        }
+                    }
+                }
+                .boat_img {
+                    position: relative;
+                    .line {
+                        position: absolute;
+                        bottom: -40px;
+                        left: 50%;
+                        @include css3-prefix("transform", "translateX(-50%)");
+                        width: 6px;
+                        height: 80px;
+                        @media (max-width: 1024px) {
+                            height: 60px;
+                            bottom: -20px;
+                        }
+                        @media (max-width: 767px) {
+                            display: none;
+                        }
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 0px;
+                            left: 0;
+                            top: 0;
+                            background: $ac_b;
+                            @include css3-prefix("transition-delay", "0.2s");
+                            @include css3-prefix("transition", "all 0.3s ease-in-out");
+                            transform-origin: center;
+                        }
+                    }
+                    .thumbnail-container {
+                        padding-bottom: 66.66%;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: rgba($color: #000000, $alpha: 0.2);
+                            opacity: 0;
+                            @include css3-prefix("transition", "all 0.3s ease-in");
+                            @media (max-width: 767px) {
+                                background: rgba($color: #000000, $alpha: 0.4);
+                                opacity: 1;
+                            }
+                        }
+                        .status-tag-line{
+                            position: absolute;
+                            top: 34px;
+                            left: -35px;                            
+                            color: #fff;
+                            font-size: 18px !important;
+                            padding: 5px 25px;
+                            transform: rotate(-45deg);
+                            z-index: 9;
+                            min-width: 170px;
+                            text-align: center;
+                            &.in-stock,
+                            &.available {
+                              background-color: #5caf10;
+                            }
+
+                            &.comingsoon {
+                              background-color: #03559d;
+                            }
+
+                            &.salepending {
+                              background-color: #ffc107;
+                            }
+
+                            &.sold {
+                              background-color: #e72726;
+                            }
+                            @media(max-width: 1024px){
+                                font-size: $ac_fs_sm;
+                                top: 28px;
+                                left: -42px;
+                            }
+                            @media(max-width: 360px){
+                                @include css3-prefix("transform", "rotate(0deg)");
+                                min-width: auto;
+                                left: 0;
+                            }
+                        }
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                .boat-desc-wrap {
+                    .boat_title {
+                        position: absolute;
+                        bottom: 25px;
+                        left: 0px;
+                        padding-left: 30px;
+                        @include css3-prefix("transition", "all 0.3s ease-in");
+                        @media (max-width: 767px) {
+                            bottom: 80px;
+                        }
+                        @media (max-width: 475px) {
+                            bottom: 100px;
+                        }
+                        .main-title {
+                            a {
+                                color: $ac-white;
+                                margin-bottom: 18px;
+                            }
+                        }
+                    }
+                    .boat_desc {
+                        pointer-events: none;
+                        position: absolute;
+                        left: 0px;
+                        padding-left: 30px;
+                        bottom: -20px;
+                        width: 100%;
+                        z-index: 111;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                        align-items: center;
+                        opacity: 0;
+                        @include css3-prefix("transition", "all 0.3s ease-in");
+                        @media (max-width: 767px) {
+                            opacity: 1;
+                            bottom: 45px;
+                        }
+                        p {
+                            font-size: 18px;
+                            line-height: 1;
+                            color: $ac-white;
+                            padding: 0 5px;
+                            margin: 5px 0;
+                            @media (max-width: 1024px) {
+                                font-size: 16px;
+                            }
+                            @media (max-width: 1024px) {
+                                font-size: 16px;
+                            }
+                            &:first-child {
+                                padding-left: 0;
+                            }
+                            + p {
+                                margin: 5px 0;
+                                border-left: 1px solid $ac-white;
+                            }
+                        }
+                    }
+                    .boat-btn {
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: 150px;
+                        padding: 15px 20px;
+                        color: $ac-white;
+                        z-index: 2;
+                        font-size: $ac_fs_sm;
+                        opacity: 0;
+                        @media (max-width: 767px) {
+                            bottom: 15px;
+                            opacity: 1;
+                            padding: 0 5px;
+                            left: 30px;
+                            line-height: 0.5;
+                            transform: translateX(0%);
+                            border-bottom: 2px solid $ac_b;
+                        }
+                        &:hover {
+                            letter-spacing: 2px;
+                        }
+                    }
+                }
+            }
+        }
+        .swiper-scrollbar {
+            left: 0;
+            width: 100%;
+            height: 2px;
+            @include css3-prefix("transform", "scaleX(0.681)");
+            @include css3-prefix("transform-origin", "left");
+            @media (max-width: 767px) {
+                @include css3-prefix("transform", "scaleX(1)");
+            }
+        }
+        .swiper-button-prev {
+            left: 15px;
+            @media (max-width: 767px) {
+                left: auto;
+                right: 35px;
+            }
+        }
+        .swiper-button-next {
+            right: 15px;
+            @media (max-width: 767px) {
+                right: 0;
+            }
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            top: 40%;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            color: $ac_white;
+            @media (max-width: 767px) {
+                top: 32px;
+                color: $ac_black;
+            }
+            &:after {
+                @media (max-width: 767px) {
+                    font-size: $ac_fs_lg;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+    .view-more {
+        position: relative;
+        top: -30px;
+        right: 14.5%;
+        @media (max-width: 1600px) {
+            right: 6.2%;
+        }
+        @media (max-width: 1366px) {
+            right: 4.2%;
+        }
+        @media (max-width: 1024px) {
+            right: 0%;
+        }
+        @media (max-width: 767px) {
+            position: unset;
+            margin: 30px 0;
+        }
+        .ac-btn {
+            padding: 16px 34px 15px;
+        }
+    }
+    .swiper {
+        @media (max-width: 767px) {
+            padding-top: 55px;
+            margin-top: -34px;
+        }
+    }
+    .cm-title {
+        @media (max-width: 767px) {
+            margin-bottom: 0;
+        }
+    }
+}

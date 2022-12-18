@@ -1,0 +1,215 @@
+$ac_mobile_small_btn: 'true';     // 'true' | 'false'
+
+/* Button S */
+    @mixin ac_btn {
+        color: $ac_b;
+        border-color: $ac_b;
+        font-size: $ac_fs_md;
+        font-weight: $ac_fw_r;    
+        font-family: $ac_ff_one;    
+        z-index: 10;
+        &::after {        
+            content: "";
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: $ac_white;
+            background-color: $ac_b;  
+            border-bottom-left-radius: 100%;
+            border-bottom-right-radius: 100%;
+            @include css3-prefix ('transition', '#{$ac_3_ti}');
+            @include css3-prefix ('transform', 'translateY(-100%)');
+            z-index: -1;
+            opacity: 0;
+        }
+        &:hover {
+            &:after {                        
+                border-bottom-left-radius: 0%;
+                border-bottom-right-radius: 0%;
+                @include css3-prefix ('transform', 'translateY(0%)');
+                opacity: 1;
+            }
+        }
+    }
+    @mixin ac_btn_hover {
+        color: $ac_white;
+        border-color: $ac_b;
+    }
+    .#{$ac}-btn, .#{$ac}-btn-primary, .#{$ac}-btn-secondary, a.#{$ac}-btn, a.#{$ac}-btn-primary, a.#{$ac}-btn-secondary{
+        @include ac_btn;
+        position: relative;
+        line-height: 100%;
+        padding: 15px 20px;
+        margin: 0;
+        border: 2px solid;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: inline-block;
+        white-space: nowrap;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        overflow: hidden;
+        @include css3-prefix ('transition', '#{$ac_3_ti}');
+        @include css3-prefix ('border-radius', '0px');        
+        @include css3-prefix ('box-shadow', 'none');  
+        &:focus, &:visited, &:active, &:not([disabled]):not(.disabled):active, .focus{
+            @include css3-prefix ('box-shadow', 'none');
+            outline: none;
+        }
+        &:hover{
+            @include ac_btn_hover;
+            @include css3-prefix ('box-shadow', 'none');
+            &:focus, &:visited, &:active, &:not([disabled]):not(.disabled):active{
+                @include ac_btn_hover;
+                @include css3-prefix ('box-shadow', 'none');
+            }
+        }
+        @if $ac_mobile_small_btn == 'true' {
+            @media (max-width: 992px){
+                font-size: $ac_fs_sm;                
+                min-height: 30px;
+                padding: 15px;
+                min-width: 160px;
+            }
+        }                
+    }
+    .btn-border {
+    position: relative;
+    font-size: $ac_fs_base - 6px;
+    color: $ac_b;
+    padding: 0 48px 10px 0;  
+    //border-bottom: 1px solid $ac_b;  
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    @include css3-prefix('box-shadow', 'none');
+    //@include css3-prefix('transition', 'all 0.5s ease-in-out');
+    overflow: hidden;
+    .text {
+        color: $ac_b;
+        display: inline-block;
+        @include css3-prefix('transition', 'transform .6s cubic-bezier(.65,.005,.35,.995)');
+    }
+    .line {        
+        position: relative;
+        width: 100%;
+        display: block;
+        &:after {
+            position: absolute;
+            content: "";            
+            bottom: -10px;
+            left: 0;
+            width: 300%;
+            background: $ac_b;
+            height: 1px;
+            @include css3-prefix('transform', 'scale(1, 1)');
+            @include css3-prefix('transition', 'transform 0.4s cubic-bezier(1, 0, 0, 1)');
+            transform-origin: left top;
+        }
+        &:before {
+            position: absolute;
+            content: "";
+            bottom: -10px;
+            left: 0;
+            width: 300%;
+            background: $ac_b;
+            height: 1px;
+            opacity: 0.7;
+            @include css3-prefix('transform', 'translateX(-100%)');            
+            @include css3-prefix('transition', 'transform 0.7s cubic-bezier(1, 0, 0, 1)');
+            transform-origin: left top;
+        }
+    }
+    &:after, &:before {
+        color: $ac_b;
+        position: absolute;
+        content: "\f101";
+        font-family: 'FontAwesome' !important;
+        font-family: 'fontAwesome' !important;
+        top: -4px;
+        font-size: 20px;
+        @include css3-prefix('transition', 'all 0.5s ease-in-out');
+    }
+    &:after {
+        right: 0;
+    }
+    &:before {
+        left: -35px;
+    }
+    &:hover {
+        .text {
+            @include css3-prefix('transform', 'translateX(45px)');
+        }
+        &:after {
+            @include css3-prefix('transform', 'translateX(35px)');
+        }
+        &:before {
+            left: 0;
+        }
+        .line {
+            &:after {
+                @include css3-prefix('transform', 'translateX(60%)');
+            }
+            &:before {
+                @include css3-prefix('transform', 'translateX(0%)');
+            } 
+        }
+    }
+}
+
+/* Button E */
+
+/* Button Primary S */
+    @mixin ac_btn_primary {
+        color: $ac_white;
+        background-color: $ac_a;
+        border-color: $ac_a;
+    }
+    @mixin ac_btn_primary_hover {
+        color: $ac_white;
+        background-color: $ac_m;
+        border-color: $ac_m;
+    }
+    .#{$ac}-btn-primary, a.#{$ac}-btn-primary {
+        @include ac_btn_primary;
+        &:focus, &:visited, &:active, &:not([disabled]):not(.disabled):active, .focus{
+            @include ac_btn_primary;
+        }
+        &:hover{
+            @include ac_btn_primary_hover;
+            &:focus, &:visited, &:active, &:not([disabled]):not(.disabled):active{
+                @include ac_btn_primary_hover;
+            }
+        }
+    }
+/* Button Primary E */
+
+/* Button Secondary S */
+    @mixin ac_btn_secondary {
+        color: $ac_white;
+        background-color: $ac_a;
+        border-color: $ac_a;
+    }
+    @mixin ac_btn_secondary_hover {
+        color: $ac_white;
+        background-color: $ac_b;
+        border-color: $ac_b;
+    }
+    .#{$ac}-btn-secondary, a.#{$ac}-btn-secondary {
+        @include ac_btn_secondary;
+        &:focus, &:visited, &:active, &:not([disabled]):not(.disabled):active, .focus{
+            @include ac_btn_secondary;
+        }
+        &:hover{
+            @include ac_btn_secondary_hover; 
+            &:focus, &:visited, &:active, &:not([disabled]):not(.disabled):active{
+                @include ac_btn_secondary_hover; 
+            }
+        }
+    }
+/* Button Color E */

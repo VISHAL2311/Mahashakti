@@ -1,0 +1,95 @@
+.detail-panel {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .sticky-panel {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 100px;
+    }
+    .item {
+        .title-a {
+            padding: 10px 0;
+            font-size: $ac_fs_3xl;
+            position: relative;
+            color: $ac_black;
+        }
+        ul {
+            margin: 0;
+            width: 100%;
+            left: 0;
+            padding: 15px 0; 
+            li {
+                list-style-type: none;
+                line-height: 100%;
+                position: relative;
+                list-style-image: none;
+                margin-bottom: 20px;
+                .thumbnail-container {
+                    padding-bottom: 13.753%;
+                    max-width: 70px;
+                    margin-right: 10px;
+                    img {
+                        @include css3-prefix ('transition', 'all 0.5s ease-in-out');
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                a {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    font-size: $ac_fs_lg - 2px;
+                    line-height: 110%;
+                    padding: 15px;
+                    transition: all 0.3s ease;
+                    background: $ac_white;
+                    @include css3-prefix ('box-shadow', '0 0 15px rgba(0,0,0,0.1)');
+                    &:hover {
+                        .thumbnail-container {
+                            img {
+                                @include css3-prefix ('transform', 'scale(1.2)');
+                            }
+                        }
+                    }
+                }
+                +li {
+                    margin-top: 10px;
+                }
+            }
+        }
+        +.item {
+            margin-top: 10px;
+        }
+        &.contact {
+            border: 1px solid #f8f8f8;
+            padding: 25px 20px;
+            position: relative;
+            text-align: center;
+            box-shadow: 0px 0px 30px #0080D914;
+            .img-qc {
+                max-width: 50px;
+                margin: auto;
+                margin-bottom: 15px;
+            }
+            .title-a {
+                background: transparent;
+                color: $ac_a;
+                &:before {
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+            }
+            .text-d {
+                text-align: center;
+                font-size: $ac_fs_lg - 2;
+            }
+            .btn-qc {
+                margin-top: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,91 @@
+.video_gallery{
+	.gap{
+		// &:nth-child(odd){
+		// 	padding-right: 5px;
+		// }
+		// &:nth-child(even){
+		// 	padding-left: 5px;
+		// }
+		margin-bottom: 30px;
+	}
+	.thumbnail-container{
+		padding-bottom: 56.34%;
+	}
+	.mask {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin:0 auto;
+		text-align: center;
+		display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    @include css3-prefix ('transition', 'all 0.3s ease-in-out');
+	    @include css3-prefix ('transform', 'scale(1.5)');
+	    transform-origin: center center;
+	    opacity: 1;
+	    @media(max-width: 1199px){
+	    	opacity: 1;
+	    	@include css3-prefix ('transform', 'scale(1)');
+	    }
+		i {
+			position: relative;
+			z-index: 1;
+			color: $ac_white;
+			font-size: $ac_fs_4xl;
+			@include css3-prefix ('transition', 'all 0.3s ease-in-out');
+		}
+		&:after {
+			position: absolute;
+			content: "";
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background: rgba($ac_black,0.2);
+			@include css3-prefix ('transition', 'all 0.3s ease-in-out');				
+		}
+	}
+	.img-v{
+		
+		.fbox{
+
+		}
+		.title-video{
+			font-size: 18px;
+			display: block;
+			width: 85%;
+			color: $ac_white;
+			position: absolute;
+			bottom: 20px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			opacity: 1;
+			@include css3-prefix ('transition', 'all 0.3s ease-in-out');
+			font-weight: $ac_fw_r;
+			@media(max-width: 1199px){
+				position: static;
+				color: $ac_a;
+				opacity: 1;
+				width: 100%;
+				margin-top: 15px;
+			}
+			@media(max-width: 767px){
+				font-size: 14px;
+			}
+		}
+		&:hover{
+			.title-video{
+				bottom: 20px;
+				opacity: 1;
+			}
+			.mask{
+				opacity: 1;
+				@include css3-prefix ('transform', 'scale(1)');
+			}
+		}
+	}
+}

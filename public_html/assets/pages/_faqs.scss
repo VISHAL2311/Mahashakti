@@ -1,0 +1,114 @@
+.faq-section {
+	.faq {		
+		.card {
+			background:$ac_white;
+			@include css3-prefix ('box-shadow', '0 9px 18px 0 rgba(0,0,0,0.06)');
+			border: 1px dashed #CEE1F8;
+			margin-bottom: 25px;
+			.card-header {
+				padding: 0px;
+				border: none;
+				background: none;
+				@include css3-prefix ('transition', 'all 0.5s ease-in-out');
+				position: relative;
+				overflow: hidden;
+				&:before{
+					position: absolute;
+				    content: "Q";
+				    left: -45px;
+				    top: 0;				    
+				    font-size: $ac_fs_d_100 + 20px;
+				    font-weight: 400;
+				    opacity: 0.1;
+				    display: flex;
+				    height: 100%;
+				    vertical-align: middle;
+				    align-items: center;
+				    @include css3-prefix ('transition', 'all 0.75s ease-in-out');
+				}
+				&:hover {
+					background: rgba($ac_b, 0.25);
+					@media(min-width: 1201px){
+						&:before,{
+							opacity: 0.35;
+							left:0;
+						}
+					}
+				}
+
+				.faq-title {
+					width: 100%;
+					text-align: left;
+					padding: 0px;
+					padding: 40px 30px 40px 40px;
+					font-weight: $ac_fw_r;
+					font-size: $ac_fs_xl;
+					letter-spacing: 1px;
+					color: $ac_a;
+					text-decoration: none !important;
+					@include css3-prefix ('transition', 'all 0.5s ease-in-out');
+					cursor: pointer;
+					@media(max-width: 475px){
+						padding: 25px 20px;
+					}
+				}
+
+			}
+
+			.card-body {
+				padding: 30px 30px 30px 40px;
+				font-weight: $ac_fw_r;
+				font-size: $ac_fs_md;
+				line-height: 28px;
+				letter-spacing: 1px;
+				border-top: 1px solid #F3F8FF;
+				position: relative;
+				overflow: hidden;
+				@include css3-prefix ('transition', 'all 0.5s ease-in-out');
+				@media(max-width: 475px){
+					padding: 25px 20px;
+				}
+				&:before{
+					position: absolute;
+				    content: "A";
+				    left: -25px;				    
+				    top: 10px;
+				    font-size: $ac_fs_d_100 + 20px;
+				    font-weight: 400;
+				    opacity: 0.1;
+				    line-height: 105px;
+				    @include css3-prefix ('transition', 'all 0.75s ease-in-out');
+				}
+				&:hover {
+					background: rgba($ac_b, 0.15);
+					@media(min-width: 1201px){
+						&:before,{
+							opacity: 0.20;
+							left:0;
+						}
+					}
+				}
+				p {
+					margin-bottom: 14px;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+@media (max-width:991px) {
+	.faq {
+		margin-bottom: 30px;
+
+		.card .card-header .faq-title {
+			line-height: 26px;
+			margin-top: 10px;
+		}
+
+	}
+
+}

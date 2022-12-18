@@ -1,0 +1,86 @@
+.about_section {
+    padding: 90px 0 30px;
+    position: relative;
+    z-index: 1;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/Group 8721@2x.png');
+        background-repeat: no-repeat;
+        background-position: center right -100px;
+        background-size: auto 578px;
+        z-index: -1;
+        @media(max-width: 767px) {
+            background-size: auto 100%;
+            background-position: center right -30px;
+        }
+    }
+    @media (max-width:1024px) {
+        padding: 45px 15px 30px;
+    }
+    @media (max-width:767px) {
+        padding: 15px;
+    }
+    .container {
+        max-width: 1170px;
+        width: 100%;
+    }
+    .main-title {
+        position: relative;
+        font-size: $ac_h2;
+        font-family: $ac_ff_one;
+        font-weight: $ac_fw_r;
+        letter-spacing: -1.1px;
+        margin: 40px 0 0;
+        padding-bottom: 40px;
+        @media(max-width: 991px) {
+            font-size: $ac_fs_7xl;
+            margin: 30px 0;
+            padding-bottom: 30px;
+        }
+        @media(max-width: 767px) {
+            font-size: $ac_fs_6xl;
+            margin: 20px 0;
+            padding-bottom: 20px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 2px;
+            background: $ac_c;
+        }
+    }
+    .s-title {
+        font-size: $ac_h4;
+        font-family: $ac_ff_one;
+        font-weight: $ac_fw_r;
+        color: $ac_b;
+        letter-spacing: 0;
+        max-width: 894px;
+        margin: 40px 0 30px;
+        @media(max-width: 767px) {
+            font-size: $ac_fs_3xl;
+            margin: 20px 0;
+        }
+    }
+    .desc {
+        max-width: 1000px;
+    }
+    .request-btn-wrap {
+        margin-top: 60px;
+        @media(max-width: 767px) {
+            margin-top: 40px;
+            // text-align: center;
+        }
+    }
+    .ac-btn {
+        padding: 15px 57px;
+    }
+}

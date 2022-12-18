@@ -1,0 +1,33 @@
+/*  Material Color Generator: http://mcg.mbitson.com/ */
+
+$ac_white: 				#FFFFFF;
+$ac_black: 				#000000;
+$ac_black_light: 		#333333;
+$ac_red: 				#FF0000;
+$ac_green: 				#008000;
+$ac_m: 					#848484;
+$ac_a: 					#1a1a1a; // Black
+$ac_b: 					#0080D9; // Blue
+$ac_c: 					#000F8F; // Dark Blue
+$ac_banner_bg:			#F5F6FF; 
+$ac_footer_link_hover:  #000f8f; // Footer Hover Blue
+
+$ac_grey:               #545454; // Boat's gray
+$ac_grey_light:			#808080; // Light Gray
+$ac_light:				#A5A5A5;
+
+$theme: default;
+
+@if $theme==Light {
+    $ac_a:	#464749; 
+    $ac_b:	#2A88BE;
+}
+@else if $theme==Dark {
+    $ac_a:	green; 
+    $ac_b:	red;
+} 
+@else {
+    // default
+}
+
+// #00a0e4

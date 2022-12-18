@@ -1,0 +1,123 @@
+/* - - - - - - - - - - - - 
+* Update Date: 19 11 2019
+- - - - - - - - - - - - - */
+
+.notfound_01 { 
+    position: relative;
+    z-index: 1;
+    // padding: 60px 0;
+    display: flex;
+    align-items: center;
+
+    @media(max-width:1199px) {
+        margin-top: 0px;
+    }
+ 
+    /* Default Setting E */
+    .error_image {
+        background-image: url('../images/Rectangle\ 3718.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: calc(100vh - 60px);
+        @media(max-width:1600px){
+            height: 90vh;
+        }
+
+        @media(max-width:1024px) {
+            padding: 137px 0 0 0;
+            max-width: unset;
+            margin-left: 0px;
+            height: 90vh;
+            background-position: center;
+        }
+
+        @media(max-width:991px) {
+            padding: 197px 0 0 0;
+            max-width: unset;
+            margin-left: 0px;
+            height: 90vh;
+            background-position: center;
+        }
+
+        @media(max-width:767px) {
+            padding: 0;
+            height: 100vh;
+        }
+
+        @media(max-width:575px) {
+            height: 80vh;
+            background-position: unset;
+        }
+    } 
+    .error_message {
+        padding: 200px 0 0 0px;
+        max-width: 690px;
+        margin-left: 129px;
+
+        @media(max-width:1600px) {
+            padding: 168px 0 0 0;
+        }
+        @media(max-width:1400px) {
+            padding: 115px 0 0 0;
+        }
+
+        @media(max-width:1024px) {
+            padding: 40px 0 0 0;
+            max-width: 520px;
+            margin-left: 40px;
+        }
+
+        @media(max-width:991px) {
+            padding: 60px 0 0 0;
+            max-width: 520px;
+            margin-left: 40px;
+        }
+
+        @media(max-width:767px) {
+            padding: 40px 0 0 0;
+            max-width: 440px;
+            margin-left: 20px;
+        }
+
+        @media(max-width:575px) {
+            margin-left: 25px;
+            padding: 120px 0 0 0;
+        } 
+        .error-title {
+            color: $ac_white;
+            margin-bottom: 30px;
+            font-size: $ac_fs_d_70; 
+
+            @media(max-width:1600px) {
+                margin-bottom: 25px;
+                font-size: $ac_fs_d_60;
+            }
+            @media(max-width:1366px) {
+                margin-bottom: 25px;
+                font-size: $ac_fs_d_50;
+            }
+
+            @media(max-width:1024px) {
+                font-size: $ac_fs_7xl;
+            }
+
+            @media(max-width:767px) {
+                font-size: $ac_fs_6xl;
+                margin-bottom: 20px;
+            }
+        } 
+        .error_para {
+            margin-bottom: 30px;
+            color: $ac_white;
+            @media(max-width:767px){
+                margin-bottom: 10px;
+            }
+        } 
+        .ac-wht {
+            z-index: 1;
+            border-color: #fff;
+            color: #fff;
+            margin-top: 15px;
+        }
+    }
+}

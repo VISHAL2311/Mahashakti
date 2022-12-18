@@ -1,0 +1,81 @@
+// .service-listing{
+//     .mask{
+//         display: none;
+//     }
+//     .container{
+//         max-width: 1340px;
+//         width: 100%;
+//     }
+//     .thumbnail-container{
+//         //padding-bottom: 56.753%;
+//         padding-bottom: 44.753%;
+//     }
+//     .o-mclass{
+//         &:nth-child(even){
+//             .info{
+//                 padding-left: 0;
+//             }
+//             @media(min-width: 568px){
+//                 .img{
+//                     order: 2;
+//                 }
+//             }
+//             .text-dv{
+
+//             }
+//             @media(min-width: 568px){
+//                 .img{
+//                     padding-right: 15px;
+//                     padding-left: 0;
+//                 }
+//                 .text-dv{
+//                     padding-left: 15px;
+//                     padding-right: 0;
+//                 }
+//             }
+//         }
+//         &:nth-child(odd){
+//             @media(min-width: 568px){
+//                 .img{
+//                     padding-left: 15px;
+//                     padding-right: 0;
+//                 }
+//                 .text-dv{
+//                     padding-right: 15px;
+//                     padding-left: 0;
+//                 }
+//             }
+//             .info{
+//                 padding-right: 15px;
+//             }
+//         }
+//         + .o-mclass{
+//             margin-top: 50px;                    
+//             .service_box{
+//                 border-top: 1px solid lighten($ac_black,90%);
+//                 padding-top: 50px;
+//             }
+//             @media(max-width: 1199px){
+//                 margin-top: 30px;
+//             }
+//             @media(max-width: 767px){
+//                 margin-top: 15px;
+//             }
+//         }
+//     }
+//     .service_box{ 
+//         .info{
+//             padding:0 50px;
+//             width:100%;
+//             @media(max-width: 1199px){
+//                 padding:0 15px;
+//             }
+//             @media(max-width: 568px){
+//                 padding: 15px 0
+//             }
+//         }
+//         .serv_list_btn{
+//             margin-top: 30px;
+//         }        
+//     }
+// }

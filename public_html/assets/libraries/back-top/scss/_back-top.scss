@@ -1,0 +1,36 @@
+body #back-top {
+    position: fixed;
+    bottom: 100px; 
+    right: 12px;
+    cursor: pointer;
+    z-index: 999;
+    @media(max-width: 1199px){
+        display: none !important;
+    }
+    &:hover{
+        margin-top: -10px;
+    }
+    i{
+        background-color: #0071c0;
+        @include css3-prefix ('border-radius','50%');
+        font-size: $ac_fs_3xl;
+        line-height: 35px;
+        color: $ac_white;
+        text-align: center;
+        @include css3-prefix ('transition','all 0.5s ease 0s');
+        display: block;
+        height: 40px;
+        width: 40px;
+        border: 2px solid $ac_white;
+        &:hover{
+            background-color: $ac_white;
+            color: #0071c0;
+            border-color: #0071c0;
+        }        
+    }
+    @media (max-width:767px) {
+         bottom: 25px;
+         right: 10px;
+         i {display: none;}
+    }
+}

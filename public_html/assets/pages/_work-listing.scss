@@ -1,0 +1,99 @@
+.work_list{
+    .container{
+        max-width: 1340px;
+        width: 100%;
+    }
+    .gap{
+        .work_box{
+            margin-bottom: 30px;
+        }    
+    }
+    .work_box{
+        // box-shadow: 0 0 10px 0 rgba(51,51,51,.15);
+        position: relative;
+        overflow: hidden;
+        @include css3-prefix ('transition', 'all 0.5s ease-in-out');    
+        .thumbnail-container{
+            position: relative;
+            //padding-bottom: 56.753%;
+            padding-bottom: 44.753%;
+            background-color: #f1f1f1;
+            .overlay{
+                position: absolute;
+                  top: 0;
+                  bottom: 0;
+                  left: 0;
+                  right: 0;
+                  height: 100%;
+                  width: 100%;
+                  opacity: 0;
+                  transition: .5s ease;
+                  background-color: rgba(0,0,0,0.9);
+            }
+        }
+        .info{
+            //padding: 20px;            
+            @media(min-width: 1199px){
+                position: relative;
+                bottom: 0;
+                left: 0;
+                width: calc(100% - 60px);
+                background-color: #fff;
+                padding: 20px;
+                margin-top: -85px;
+                z-index: 11;
+                border-left: 1px solid #f2f2f2;
+                border-bottom: 1px solid #f2f2f2;
+            }
+            @media(max-width: 1199px){
+                margin-top: 20px;
+                padding: 0;
+            }
+            @include css3-prefix ('transition', 'all 0.5s ease-in-out');
+            .list_title{
+                a{
+                    color: $ac_b;
+                    &:hover{
+                        color: $black;
+                    }
+                }
+            }
+            .short_desc{
+                margin: 20px 0 10px 0;
+                //color: darken($ac_white, 5%);
+                p{
+                    margin-bottom: 0;
+                    font-size: 16px;
+                }
+            }
+            .work_list_btn{
+                width: 60px;
+                height: 60px;
+                background-color: $ac_b;
+                position: absolute;
+                right: -60px;
+                bottom: 1px;
+                display: flex;
+                align-items: center;
+                justify-content: center;                
+                .ac-arrow-right{
+                    font-size: 14px;
+                    color: $ac_white;
+                }
+            }
+        }
+        &:hover{
+            .info{
+                @media(min-width: 1199px){
+                    left: 0;
+                }
+            }
+            .overlay{
+                opacity: 0.2;
+            }
+            .info{
+                bottom: 0px;
+            }
+        }
+    }
+}

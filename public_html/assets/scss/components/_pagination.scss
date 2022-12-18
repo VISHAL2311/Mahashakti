@@ -1,0 +1,102 @@
+/* Pagination S */
+    .pagination{
+        margin: 30px 0 !important;
+        padding: 0;
+        list-style: none;
+        display: flex!important;
+        align-items: center;
+        justify-content: center;
+        @include css3-prefix-last ('display', 'inline-flex');
+        li.page-item{
+            margin: 0 10px;
+            padding: 0;
+            display: inline;
+            text-align: center;
+            @media(max-width: 767px){
+                margin: 0 6px;
+            } 
+            &:before{
+                content: none;
+            }           
+            .page-link{
+                position: relative;
+                float: left;
+                padding: 0;
+                margin-left: -1px;
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+                font-size: 16px;
+                font-weight: $ac_fw_r;
+                color: $ac_black;
+                background-color: $ac_white;
+                border: none;
+                box-shadow: none;
+                @include css3-prefix ('transition','all 0.5s ease-in-out');
+                &:after{
+                    position: absolute;
+                    content: '';
+                    width: 0;
+                    height: 2px;
+                    left: 0;
+                    bottom: 0;
+                    background-color: $ac_b;
+                    @include css3-prefix('transition', all .5s ease-in-out);
+                }
+                i{
+                    font-size: $ac_fs_sm;
+                    font-weight: $ac_fw_r;
+                    color: $ac_m;
+                }                
+            }
+            &.active,&:hover{
+                .page-link{
+                    color: $ac_b;
+                    &:after{
+                        width: 100%;
+                    }
+                }
+            }
+            &:first-child, &:last-child{
+                .page-link{
+                    width: auto;
+                    padding: 0 15px;
+                    font-size: $ac_fs_xl;
+                    color: transparent;
+                }
+            }
+            &:first-child{
+                .page-link{
+                    @include css3-prefix ('border-radius', '#{$ac_3_br_0} #{$ac_3_br_0} #{$ac_3_br_0} #{$ac_3_br_0}');
+                    &:before{
+                        content: '\f104';
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        top: 50%;
+                        transform: translate(0,-50%);
+                        font-family:FontAwesome;
+                        color: $ac_a; 
+                    }
+                }                
+            }
+            &:last-child{
+                .page-link{
+                    @include css3-prefix ('border-radius', '#{$ac_3_br_0} #{$ac_3_br_0} #{$ac_3_br_0} #{$ac_3_br_0}');
+                    &:before{
+                        content: '\f105';
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        top: 50%;
+                        transform: translate(0,-50%);
+                        font-family:FontAwesome;
+                        color: $ac_a; 
+                    }
+                }
+            }
+        }
+    }
+/* Pagination E */

@@ -1,0 +1,164 @@
+.thankyou-01 {  
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  .thankyou_image {
+      background-image: url('../images/Rectangle\ 3718.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: calc(100vh - 60px);
+      @media(max-width:1600px){
+          height: 90vh;
+      }
+      @media(max-width:1024px) {
+          padding: 137px 0 0 0;
+          max-width: unset;
+          margin-left: 0px;
+          height: 90vh;
+          background-position: center;
+      }
+      @media(max-width:991px) {
+          padding: 197px 0 0 0;
+          max-width: unset;
+          margin-left: 0px;
+          height: 90vh;
+          background-position: center;
+      }
+      @media(max-width:767px) {
+          padding: 0;
+          height: 100vh;
+      }
+      @media(max-width:575px) {
+          height: 80vh;
+          background-position: unset;
+      }
+      @media (orientation:landscape) and (max-width:991px){
+        padding: 25px;
+      }
+  }
+  .thankyou_message {
+      padding: 250px 0 0 0px;
+      max-width: 690px;
+      margin-left: 129px;
+      @media(max-width:1600px) {
+          padding: 168px 0 0 0;
+      }
+      @media(max-width:1400px) {
+          padding: 115px 0 0 0;
+      }
+      @media(max-width:1024px) {
+          padding: 40px 0 0 0;
+          max-width: 520px;
+          margin-left: 40px;
+      }
+      @media(max-width:991px) {
+          padding: 60px 0 0 0;
+          max-width: 520px;
+          margin-left: 40px;
+      }
+      @media(max-width:991px) {
+          max-width: 450px;
+      }
+      @media(max-width:767px) {
+          max-width: 340px;
+      }      
+      @media(max-width:575px) {
+          margin: 0;
+          padding: 150px 25px;
+      }      
+      @media (orientation:landscape) and (max-width:991px){
+        padding: 25px;
+      }
+      .thankyou_singup{
+        color: $ac_white;
+      }
+      .thankyou_title {
+          color: $ac_white;
+          margin-bottom: 30px;
+          font-size: $ac_fs_d_70 + 5px; 
+          @media(max-width:1600px) {
+              margin-bottom: 25px;
+              font-size: $ac_fs_d_60;
+          }
+          @media(max-width:1366px) {
+              margin-bottom: 25px;
+              font-size: $ac_fs_d_50;
+          }
+          @media(max-width:1024px) {
+              font-size: $ac_fs_7xl;
+          }
+          @media(max-width:767px) {
+              font-size: $ac_fs_6xl;
+              margin-bottom: 20px;
+          }
+      }
+      .thankyou_para {
+          margin-bottom: 20px;
+          margin-top: 10px;
+          color: $ac_white;
+            @media(max-width:575px) {
+                margin-bottom: 25px;
+              }
+            a{
+                color: $ac_white;
+                &:hover{
+                    color: $ac_b;
+                }
+            }
+      }
+      .ac-wht {
+          z-index: 1;
+          border-color: #fff;
+          color: #fff;
+          margin-top: 20px;
+      }
+  }
+}
+.checkmark {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 0 auto;
+    background: #2a88be;
+    box-shadow: inset 0px 0px 0px #2a88be;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+  .checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #2a88be;
+    fill: none;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+    }
+    .checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    stroke-width: 3;
+    animation: stroke 3s ease-in-out 3s infinite;
+    }
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #2a88be;
+  }
+}

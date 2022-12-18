@@ -1,0 +1,12 @@
+/*! Lazy Load XT v1.1.0 2016-01-12
+ * http://ressio.github.io/lazy-load-xt
+ * (C) 2016 RESS.io
+ * Licensed under MIT */
+.lazy,.lazy.loading {
+	@media(min-width: 1200px){
+		@include css3-prefix('filter', 'blur(10px)');
+	}	
+}
+.lazy.loaded,.lazy.error{	
+    @include css3-prefix('filter', 'none');
+}
